@@ -38,6 +38,7 @@ text_filter_1.add_filter('안녕', answer='안녕 오늘 기분어때?')
 text_filter_1.add_filter('시험', '긴장', answer='그치 떨리겠다ㅜ 그래도 긴장말고 시험 잘쳐ㅎㅎ')
 
 text_filter_2 = text_filters[1]
+text_filter_2.add_filter('날씨', answer='날씨 안좋아')
 text_filter_2.add_filter('안녕', answer='오늘 학교 시험이지?')
 text_filter_2.add_filter('떨', answer='시험 잘칠거야ㅎㅎ 긴장하지말구!')
 
