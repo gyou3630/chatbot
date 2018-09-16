@@ -2,6 +2,7 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('keyboard', views.keyboard),
-    path('message', views.message),
+    path('<int:service_id>/keyboard', views.keyboard, name='keyboard'),
+    path('<int:service_id>/message', views.message),
 ]
+
