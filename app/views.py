@@ -14,30 +14,46 @@ def keyboard(request, service_id):
     )
 
 
+class TextFilter:
+    def __init__(self, default_answer='Default'):
+        self.filter_words_list = []
+        self.default_answer = default_answer
+
+    def add_filter(self, *args, answer=''):
+        self.filter_words_list.append((args, answer))
+
+    def run(self, sentence):
+        for filter_words, answer in self.filter_words_list:
+            for filter_word in filter_words:
+                if filter_word in sentence:
+                    return answer
+        return self.default_answer
+
+
+text_filters = [TextFilter() for i in range(4)]
+
+text_filter_1 = text_filters[0]
+text_filter_1.add_filter('안녕', answer='안녕 오늘 기분어때?')
+text_filter_1.add_filter('시험', '긴장', answer='그치 떨리겠다ㅜ 그래도 긴장말고 시험 잘쳐ㅎㅎ')
+
+text_filter_2 = text_filters[1]
+text_filter_2.add_filter('안녕', answer='오늘 학교 시험이지?')
+text_filter_2.add_filter('떨', answer='시험 잘칠거야ㅎㅎ 긴장하지말구!')
+
+text_filter_3 = text_filters[2]
+text_filter_3.add_filter('안녕', answer='오늘 중간고사지? 시험 잘쳐!!')
+text_filter_3.add_filter('떨', answer='잘칠거야 화이팅!!')
+
+text_filter_4 = text_filters[3]
+text_filter_4.add_filter('안녕', answer='오늘 중간고사지? 우리가 응원할께!!')
+text_filter_4.add_filter('감동', answer='우리가 응원해주니까 잘칠거야 걱정마!!')
+
+
 @csrf_exempt
 def message(request, service_id):
-    content = json.loads((request.body).decode('utf-8'))['content']
-    text = '(/^0^)/'
-    if service_id == 1:
-        if content == '안녕':
-            text = '안녕 오늘 기분어때?'
-        elif '시험' in content and '긴장' in content:
-            text = '그치 떨리겠다 그래도 긴장말고 시험 잘쳐'
-    elif service_id == 2:
-        if content == '안녕':
-            text = '오늘 학교 시험이지?'
-        elif '떨려' in content:
-            text = '시험 잘칠거야 긴장하지말구!'
-    elif service_id == 3:
-        if content == '안녕':
-            text = '오늘 중간고사지? 시험 잘쳐!!'
-        elif '떨' in content:
-            text = '잘칠거야 화이팅!!'
-    elif service_id == 4:
-        if content == '안녕':
-            text = '오늘 중간고사지? 우리가 응원할께!!'
-        elif '감동' in content:
-            text = '우리가 응원해주니까 잘칠거야 걱정마!!'
+    content = json.loads(request.body.decode('utf-8'))['content']
+    # text = '(/^0^)/~'
+    text = text_filters[service_id - 1].run(content)
     return JsonResponse(
         {
             'message': {
