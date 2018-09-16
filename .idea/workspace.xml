@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa5632c1-3e21-4c30-b59b-618a60dfe580" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,12 +30,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2184" />
+          <entry key="py" value="2227" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2184" />
+          <entry key="Python" value="2227" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -72,14 +70,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="54" column="23" lean-forward="true" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
+            <state relative-caret-position="310">
+              <caret line="35" column="31" lean-forward="true" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1537101328667" expanded="true" signature="299:304" ph="..." />
-                <marker date="1537101328667" expanded="true" signature="299:1434" ph="..." />
-                <marker date="1537101328667" expanded="true" signature="475:535" ph="..." />
-                <marker date="1537101328667" expanded="true" signature="559:568" ph="..." />
+                <marker date="1537101770832" expanded="true" signature="299:304" ph="..." />
+                <marker date="1537101770832" expanded="true" signature="299:1491" ph="..." />
+                <marker date="1537101770832" expanded="true" signature="475:535" ph="..." />
+                <marker date="1537101770832" expanded="true" signature="559:568" ph="..." />
               </folding>
             </state>
           </provider>
@@ -248,14 +246,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="54" column="23" lean-forward="true" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
+        <state relative-caret-position="310">
+          <caret line="35" column="31" lean-forward="true" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <marker date="1537101328667" expanded="true" signature="299:304" ph="..." />
-            <marker date="1537101328667" expanded="true" signature="299:1434" ph="..." />
-            <marker date="1537101328667" expanded="true" signature="475:535" ph="..." />
-            <marker date="1537101328667" expanded="true" signature="559:568" ph="..." />
+            <marker date="1537101770832" expanded="true" signature="299:304" ph="..." />
+            <marker date="1537101770832" expanded="true" signature="299:1491" ph="..." />
+            <marker date="1537101770832" expanded="true" signature="475:535" ph="..." />
+            <marker date="1537101770832" expanded="true" signature="559:568" ph="..." />
           </folding>
         </state>
       </provider>

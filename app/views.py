@@ -30,9 +30,10 @@ class TextFilter:
         return self.default_answer
 
 
-text_filters = [TextFilter() for i in range(4)]
+text_filters = [TextFilter('(/^0^)/~') for i in range(4)]
 
 text_filter_1 = text_filters[0]
+text_filter_1.add_filter('날씨', answer='날씨 좋다')
 text_filter_1.add_filter('안녕', answer='안녕 오늘 기분어때?')
 text_filter_1.add_filter('시험', '긴장', answer='그치 떨리겠다ㅜ 그래도 긴장말고 시험 잘쳐ㅎㅎ')
 
